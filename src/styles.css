@@ -1,0 +1,250 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+/* rubik-regular - latin_hebrew */
+
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('assets/fonts/rubik-black.woff2') format('woff2'),
+  url('assets/fonts/rubik-black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('assets/fonts/rubik-blackitalic.woff2') format('woff2'),
+  url('assets/fonts/rubik-blackitalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('assets/fonts/rubik-bold.woff2') format('woff2'),
+  url('assets/fonts/rubik-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('assets/fonts/rubik-bolditalic.woff2') format('woff2'),
+  url('assets/fonts/rubik-bolditalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('assets/fonts/rubik-medium.woff2') format('woff2'),
+  url('assets/fonts/rubik-medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('assets/fonts/rubik-mediumitalic.woff2') format('woff2'),
+  url('assets/fonts/rubik-mediumitalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('assets/fonts/rubik-regular.woff2') format('woff2'),
+  url('assets/fonts/rubik-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('assets/fonts/rubik-italic.woff2') format('woff2'),
+  url('assets/fonts/rubik-italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('assets/fonts/rubik-light.woff2') format('woff2'),
+  url('assets/fonts/rubik-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('assets/fonts/rubik-lightitalic.woff2') format('woff2'),
+  url('assets/fonts/rubik-lightitalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+body {
+  font-family: Rubik!important;
+  background-image: url("assets/images/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+input,
+input:focus{
+  outline: none;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.searchbox{
+  position: relative;
+  width: 100%;
+  height: 3.625rem;
+  border-bottom: solid 1px #00003c;
+  margin-top: 6px;
+}
+.searchbox:hover {
+  border-bottom: solid 1px #07a2ba;
+}
+.fromto {
+  background: url(./assets/images/fromto.png) no-repeat 60% center;
+  font-size: 2.375rem;
+  color: #00003c;
+  display: flex;
+}
+.search .engine .search-hotel li.search-dates .fromto div {
+  display: flex;
+  align-items: baseline;
+  padding-top: 0.4375rem;
+  width: 50%;
+  height: 3.625rem;
+}
+.fromto #myDates-toDay,
+.fromto #myDates-fromDay{
+  width: 46px;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: 2.375rem;
+  font-weight: 300;
+  color: inherit;
+}
+.fromto #myDates-toMonth,
+.fromto #myDates-fromMonth{
+  width: calc(100% - 46px);
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: inherit;
+}
+.search-arrow-down {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  width: 8px;
+  transform: rotate(-90deg);
+}
+.searchbox.active .search-arrow-down {
+  transform: rotate(90deg);
+  left: 8px;
+  top:50px;
+}
+.search-arrow-down:after,
+.search-arrow-down:before{
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 2px;
+  background: #07a2ba;
+}
+.search-arrow-down:after {
+  transform: rotate(-45deg);
+}
+.search-arrow-down:before {
+  transform: rotate(45deg);
+  margin-top: 5px;
+}
+.searchbox .label {
+  position: absolute;
+  bottom: 2px;
+  right: 0;
+  padding-top: 0.4375rem;
+  height: 3.625rem;
+  font-family: inherit;
+  font-weight: 300;
+  transform: translateY(-20px);
+  font-size: 0.875rem;
+  color: #00003c;
+  opacity: 0;
+}
+.searchbox .field-error-content {
+  position: absolute;
+  bottom: -18px;
+  font-size: 0.75rem;
+  color: #e82020;
+  display: none;
+}
+.search-arrow-down-room {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  width: 8px;
+  transform: rotate(-90deg);
+}
+.search-arrow-down-room.active1{
+  transform: rotate(90deg);
+  left: 23px!important;
+  top: 75%;
+}
+.search-arrow-down-room:after,
+.search-arrow-down-room:before{
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 2px;
+  background: #07a2ba;
+}
+.search-arrow-down-room:after {
+  transform: rotate(-45deg);
+}
+.search-arrow-down-room:before {
+  transform: rotate(45deg);
+  margin-top: 5px;
+}
+.search-arrow-down.rooms.active{
+  transform: rotate(90deg);
+  left: 8px!important;
+  top: 40%;
+}
+.search-arrow-down.children.active{
+  transform: rotate(90deg);
+  left: 7px!important;
+  top: 75%;
+}
+/*.example-form{*/
+  /*width:75rem;*/
+/*}*/
+/*.popover.calendar{*/
+  /*width:75rem;*/
+/*}*/
+/*.search.pos{*/
+  /*margin: 1.375rem auto 6.563rem;*/
+  /*position: relative;*/
+  /*z-index: 4;*/
+/*}*/
+/*.hero {*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: center top;*/
+  /*font-family: 'Rubik', Arial;*/
+  /*letter-spacing: -0.5px;*/
+/*}*/
+/*.search {*/
+  /*width: 75rem;*/
+  /*opacity: 0.98;*/
+  /*background-color: #ffffff;*/
+  /*box-shadow: 0 8px 15px 8px rgba(0,0,0,0.02);*/
+/*}*/

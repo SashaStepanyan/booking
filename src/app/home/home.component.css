@@ -1,0 +1,779 @@
+.example-full-width {
+    width: 100%;
+}
+.example-form .cont {
+  background-color: #fafbfb;
+  padding: 55px 80px;
+    position: relative;
+    width: 75rem;
+    margin: 0 auto;
+}
+
+.custom-day {
+  text-align: center;
+  padding: 0.7rem 0.25rem;
+  display: inline-block;
+  height: 3rem;
+  width: 3.5rem;
+  font-size: 1.125rem;
+  position: relative;
+}
+.custom-day:focus {
+  outline: none;
+}
+.custom-day.focused {
+  background-color: #00003c;
+  font-weight: 500;
+  outline: none;
+}
+.custom-day.range, .custom-day:hover {
+  background-color: #07a2ba;
+  color: white;
+}
+.custom-day.start:after,
+.custom-day.end:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+  content: " ";
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  z-index: 10;
+}
+.custom-day.end:after {
+  border-left: 0;
+  border-right: 4px solid #d9f1f5;
+  left: auto;
+  right: -1px;
+}
+.custom-day.start:after {
+  border-left: 0;
+  border-right: 4px solid #07a2ba;
+  right: auto;
+  left: -3px;
+}
+.custom-day.faded {
+  background-color: #d9f1f5;
+  color: #00003c;
+}
+::ng-deep .popover.calendar {
+  width: 100%;
+}
+::ng-deep .popover.guests {
+    width: 13.25rem;
+}
+::ng-deep .popover {
+  max-width: none;
+  border: none;
+  box-shadow: 0 8px 15px 8px rgba(0,0,0,0.08);
+  border-radius: 0;
+}
+::ng-deep .popover div.arrow:before {
+  border-bottom-color:transparent;
+}
+::ng-deep .popover.calendar div.arrow {
+  left: 55%;
+}
+::ng-deep .popover.calendar.bs-popover-bottom {
+  margin-top: 0;
+}
+.calendar_trigger {
+  height: 1px;
+  width: 100%;
+}
+ngb-datepicker {
+  border: none;
+  display: block;
+  width: 89%;
+  margin: 0 auto;
+}
+::ng-deep .ngb-dp-header,
+::ng-deep .ngb-dp-week.ngb-dp-weekdays,
+::ng-deep .ngb-dp-month-name{
+  background-color: transparent !important;
+  border-bottom: none;
+}
+::ng-deep .example-form .ngb-dp-navigation-chevron {
+  color: #00003c;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-width: .1em .1em 0 0;
+  width: .5em;
+  height: .5em;
+}
+::ng-deep .example-form .right .ngb-dp-navigation-chevron {
+  -webkit-transform: rotate(-138deg);
+  transform: rotate(-138deg);
+  margin-left: 1.15em;
+}
+::ng-deep .example-form .ngb-dp-weekday.small{
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #00003c;
+  line-height: 3rem;
+  font-style: normal;
+  font-family: Rubik;
+}
+::ng-deep .example-form .ngb-dp-day,
+::ng-deep .example-form .ngb-dp-week-number,
+::ng-deep .example-form .ngb-dp-weekday {
+  width: 3.5rem;
+  height: 3rem;
+}
+::ng-deep .example-form .ngb-dp-months {
+  justify-content: space-between;
+}
+/*::ng-deep .example-form .ngb-dp-month:first-child {*/
+  /*margin-left: 50px;*/
+/*}*/
+/*::ng-deep .example-form .ngb-dp-month:last-child {*/
+  /*margin-right: 50px;*/
+/*}*/
+::ng-deep .example-form .ngb-dp-month-name {
+  font-size: 1.375rem;
+  font-weight: 400;
+}
+::ng-deep .example-form .ngb-dp-arrow:first-child,
+::ng-deep .example-form .ngb-dp-arrow:last-child {
+  max-width: 8rem;
+}
+
+.drp-buttons {
+  display: inline-block;
+  width: 90%;
+}
+
+.drp-buttons .btn {
+  background: transparent;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.375rem;
+  font-weight: 500;
+  color: #07a2ba;
+}
+
+.drp-buttons .btn.cancelBtn {
+  float: right;
+}
+
+.drp-buttons .btn.applyBtn {
+  float: left;
+}
+
+.calendar_container {
+  margin: 20px 50px;
+  text-align: center;
+}
+
+::ng-deep .mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline {
+    background-image: none;
+    background-size: 88px 100%;
+    background-repeat: repeat-x;
+    background-color: #00003c;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline{
+    background-color: #00003c;
+}
+::ng-deep .mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline {
+    background-position: 0;
+    background-color: #00003c!important;
+}
+
+::ng-deep .mat-form-field-wrapper{
+    padding-bottom: 0 !important;
+}
+
+::ng-deep .mat-form-field-wrapper:hover::ng-deep .mat-form-field-underline{
+    background-color: #2ab0c5 !important;
+}
+::ng-deep .mat-form-field-wrapper:hover::ng-deep .mat-form-field-disabled{
+    background-color: #2ab0c5 !important;
+}
+.guests_value:hover::ng-deep .mat-form-field-underline{
+  background-color: #2ab0c5 !important;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple{
+    background-color: #2ab0c5 !important;
+}
+
+::ng-deep .mat-form-field-should-float .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .mat-form-field-label-wrapper label {
+    width: 100%;
+    height: 3rem;
+    border: 0;
+    background: transparent;
+    font-size: 1rem;
+    color: #00003c;
+    font-family: Rubik!important;
+    font-weight: 200;
+    line-height: 3.5;
+}
+
+::ng-deep .mat-autocomplete-panel::-webkit-scrollbar {
+    height: 10px;
+    width: 6px;
+    background: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Track */
+::ng-deep .mat-autocomplete-panel::-webkit-scrollbar-track {
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Handle */
+::ng-deep .mat-autocomplete-panel::-webkit-scrollbar-thumb {
+    background: #c9c8d4;
+    border-radius: 10px;
+    cursor: pointer;
+}
+::ng-deep .mat-autocomplete-panel .mat-option{
+    font-family: Rubik;
+    font-size: 1.125rem;
+    font-weight: 300;
+    height: 3.625rem;
+    border-bottom: solid 1px #ededed;
+    padding: 2.5rem 0 1.5rem 0;
+    margin-left: 9.953px;
+    background: white;
+    color: #00003c;
+
+}
+
+::ng-deep .mat-autocomplete-panel .mat-option:hover,::ng-deep .mat-autocomplete-panel .mat-option:focus{
+    color: #2ab0c5;
+    font-weight: 500;
+    cursor: pointer;
+    background: white;
+}
+::ng-deep .mat-form-field-infix{
+    position: inherit!important;
+}
+
+::ng-deep .mat-form-field-infix .mat-input-element{
+    width: 100%;
+    height: 3.625rem;
+    border: 0;
+    background: transparent;
+    font-size: 2.375rem;
+    font-family: Rubik;
+    font-weight: 200;
+    color: #00003c;
+    padding-bottom: 26px;
+}
+
+::ng-deep .mat-autocomplete-panel{
+    pointer-events: auto!important;
+    top: 15px !important;
+    right: -13% !important;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+::ng-deep .mat-form-field-label-wrapper .mat-form-field-label {
+    width: 100%;
+    height: 3rem;
+    border: 0;
+    background: transparent;
+    font-size: 1rem;
+    font-family: Rubik!important;
+    font-weight: 200;
+    line-height: 3.5;
+    color: #777777;
+}
+::ng-deep .mat-form-field-label-wrapper{
+    transform: translateY(-7px);
+}
+
+::ng-deep .mat-form-field-label-wrapper .mat-form-field-label.mat-form-field-empty.mat-empty {
+    width: 100%;
+    height: 3rem;
+    border: 0;
+    background: transparent;
+    font-size: 2.375rem;
+    font-family: Rubik!important;
+    font-weight: 200;
+    line-height: 0.5;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label{
+    color: #00003c;
+}
+.mat-form-field-label .ng-star-inserted{
+    font-size: 1rem!important;
+}
+
+
+.value-decrease {
+    width: 30%;
+    margin: 0 35%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 500;
+    color: #07a2ba;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.value-increase {
+    width: 30%;
+    margin: 0 35%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 500;
+    color: #07a2ba;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.myRoomsDiv input {
+    width: 100%;
+    height: 5rem;
+    padding: 0;
+    border: 0;
+    font-family: Rubik;
+    font-size: 5rem;
+    font-weight: 300;
+    text-align: center;
+    color: #00003c;
+    line-height: 5rem;
+}
+
+.myRoomsDiv .value-name {
+    font-family: Rubik;
+    margin-top: -0.5rem;
+    width: 100%;
+    font-size: 0.875rem;
+    font-weight: 300;
+    text-align: center;
+    color: #00003c;
+}
+.myGuestsDiv .children {
+    float: right;
+    width: 50%;
+    border-right: 2px solid #d8d8d899;
+}
+
+.myGuestsDiv .adults {
+    float: right;
+    width: 50%;
+}
+
+.myGuestsDiv input {
+    width: 100%;
+    height: 5rem;
+    padding: 0;
+    border: 0;
+    font-family: Rubik;
+    font-size: 5rem;
+    font-weight: 300;
+    text-align: center;
+    color: #00003c;
+    line-height: 5rem;
+    background-color: transparent;
+}
+
+.children .value-name{
+    font-family: Rubik;
+    margin-top: -0.5rem;
+    width: 100%;
+    font-size: 0.875rem;
+    font-weight: 300;
+    text-align: center!important;
+    color: #00003c;
+}
+.adults .value-name{
+    font-family: Rubik;
+    margin-top: -0.5rem;
+    width: 100%;
+    font-size: 0.875rem;
+    font-weight: 300;
+    text-align: center!important;
+    color: #00003c;
+}
+
+.buttonArea button{
+    position: relative;
+    width: 100%;
+    height: 3.625rem;
+    background: #07a2ba;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    text-indent: -1000px;
+    overflow: hidden;
+    -webkit-transition: 0.3s transform ease-in-out;
+    transition: 0.3s transform ease-in-out;
+}
+
+.rooms{
+    left: 16px;
+}
+.form_btn{
+    width:75px!important;
+    background: #07a2ba url(../../assets/images/search-submit.png) no-repeat 50% center !important;
+}
+.submitBox button.form_btn_small_screen {
+  display: none;
+  text-indent: 0;
+  color: #fff;
+}
+.form_btn:hover,.form_btn:focus{
+    transform: translateY(-5%);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+::ng-deep .mat-ripple-element {
+    background-color: transparent ;
+}
+
+.plusDiv{
+    position: absolute;
+    right: 34px;
+    top: 15px;
+    color: #00003c;
+    font-size: 2.375rem;
+}
+.labelguests {
+  position: absolute;
+  right: 0;
+  top: 3px;
+  padding-top: 0.4375rem;
+  height: 3.625rem;
+  font-size: 2.375rem;
+  font-family: inherit;
+  font-weight: 300;
+  color: #777777;
+}
+::ng-deep .hidden_placeholder .mat-form-field-label.mat-empty.mat-form-field-empty{
+  display: none;
+}
+.myRoomsDiv input::placeholder{
+  color: #00003c !important;
+}
+.myGuestsDiv input::placeholder{
+  color: #00003c !important;
+}
+@media (min-width: 320px) and (max-width: 375px) {
+    .plusDiv{
+        position: absolute;
+        right: 21px;
+        top: 15px;
+        color: #00003c;
+        font-size: 2.375rem;
+    }
+
+    ::ng-deep .example-form .ngb-dp-day,
+    ::ng-deep .example-form .ngb-dp-week-number,
+    ::ng-deep .example-form .ngb-dp-weekday {
+        width: 2rem;
+        height: 1.5rem;
+    }
+    .custom-day {
+        height: 1.5rem;
+        width: 2rem;
+        font-size: 0.7rem;
+        padding: 0.2rem 0.25rem
+    }
+    .calendar_container {
+        margin: 15px;
+    }
+    ngb-datepicker {
+        width: 95%;
+    }
+    ::ng-deep .ngb-dp-months{
+        display: inline-block!important;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 425px) {
+    ::ng-deep .example-form .ngb-dp-day,
+    ::ng-deep .example-form .ngb-dp-week-number,
+    ::ng-deep .example-form .ngb-dp-weekday {
+        width: 2rem;
+        height: 1.5rem;
+    }
+    .custom-day {
+        height: 1.5rem;
+        width: 2rem;
+        font-size: 0.7rem;
+        padding: 0.2rem 0.25rem
+    }
+    .calendar_container {
+        margin: 15px;
+    }
+    ngb-datepicker {
+        width: 95%;
+    }
+    ::ng-deep .ngb-dp-months{
+        display: inline-block!important;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 450px) {
+    ::ng-deep .example-form .ngb-dp-day,
+    ::ng-deep .example-form .ngb-dp-week-number,
+    ::ng-deep .example-form .ngb-dp-weekday {
+        width: 2rem;
+        height: 1.5rem;
+    }
+    .custom-day {
+        height: 1.5rem;
+        width: 2rem;
+        font-size: 0.7rem;
+        padding: 0.2rem 0.25rem
+    }
+    .calendar_container {
+        margin: 15px;
+    }
+    ngb-datepicker {
+        width: 95%;
+    }
+    ::ng-deep .ngb-dp-months{
+        display: inline-block!important;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 470px) {
+    ::ng-deep .example-form .ngb-dp-day,
+         ::ng-deep .example-form .ngb-dp-week-number,
+         ::ng-deep .example-form .ngb-dp-weekday {
+             width: 2rem;
+             height: 1.5rem;
+         }
+    .custom-day {
+        height: 1.5rem;
+        width: 2rem;
+        font-size: 0.7rem;
+        padding: 0.2rem 0.25rem
+    }
+    .calendar_container {
+        margin: 15px;
+    }
+    ngb-datepicker {
+        width: 95%;
+    }
+    ::ng-deep .ngb-dp-months{
+        display: inline-block!important;
+    }
+}
+@media (min-width: 470px) and (max-width: 554px) {
+    ::ng-deep .example-form .ngb-dp-day,
+    ::ng-deep .example-form .ngb-dp-week-number,
+    ::ng-deep .example-form .ngb-dp-weekday {
+        width: 2rem;
+        height: 1.5rem;
+    }
+    .custom-day {
+        height: 1.5rem;
+        width: 2rem;
+        font-size: 0.7rem;
+        padding: 0.2rem 0.25rem
+    }
+    .calendar_container {
+        margin: 15px;
+    }
+    ngb-datepicker {
+        width: 95%;
+    }
+    ::ng-deep .ngb-dp-months{
+        display: inline-block!important;
+    }
+}
+
+@media (min-width: 555px) and (max-width: 574px) {
+    ::ng-deep .example-form .ngb-dp-day,
+    ::ng-deep .example-form .ngb-dp-week-number,
+    ::ng-deep .example-form .ngb-dp-weekday {
+        width: 2rem;
+        height: 1.5rem;
+    }
+    .custom-day {
+        height: 1.5rem;
+        width: 2rem;
+        font-size: 0.7rem;
+        padding: 0.2rem 0.25rem
+    }
+    .calendar_container {
+        margin: 15px;
+    }
+    ngb-datepicker {
+        width: 95%;
+    }
+
+}
+
+
+@media (min-width: 575px) and (max-width: 767px) {
+    ::ng-deep .example-form .ngb-dp-day,
+    ::ng-deep .example-form .ngb-dp-week-number,
+    ::ng-deep .example-form .ngb-dp-weekday {
+        width: 2rem;
+        height: 1.5rem;
+    }
+    .custom-day {
+        height: 1.5rem;
+        width: 2rem;
+        font-size: 0.7rem;
+        padding: 0.2rem 0.25rem
+    }
+    .calendar_container {
+        margin: 15px;
+    }
+    ngb-datepicker {
+        width: 95%;
+    }
+}
+@media (max-width: 1280px) {
+  .example-form .cont {
+    width: auto;
+    margin-right: 2.03125%;
+    margin-left: 2.03125%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 990px){
+  ::ng-deep .example-form .ngb-dp-day,
+  ::ng-deep .example-form .ngb-dp-week-number,
+  ::ng-deep .example-form .ngb-dp-weekday {
+    width: 2.5rem;
+    height: 2rem;
+  }
+  .custom-day {
+    height: 2rem;
+    width: 2.5rem;
+    font-size: 0.9rem;
+    padding: 0.2rem 0.25rem
+  }
+  .calendar_container {
+    margin: 20px;
+  }
+  ngb-datepicker {
+    width: 95%;
+  }
+}
+
+.mat-option.mat-selected:not(.mat-option-multiple):not(.mat-option-disabled){
+    background: transparent;
+}
+
+.searchBox{
+    position: relative;
+    width: 26.2%;
+    margin-left: 3.365384615384615%;
+    height: 3.625rem;
+}
+
+.calendarBox{
+    position: relative;
+    width: 26.2%;
+    margin-left: 3.365384615384615%;
+    height: 3.625rem;
+}
+
+.roomsBox {
+    position: relative;
+    width: 12.5%;
+    margin-left: 3.365384615384615%;
+    height: 3.625rem;
+}
+
+.guestsBox{
+    position: relative;
+    width: 12.5%;
+    margin-left: 3.365384615384615%;
+    height: 3.625rem;
+}
+
+.submitBox{
+    margin-left: 0;
+    margin-right: auto;
+    border-bottom: 0;
+    width: 7.115384615384615%;
+    padding-top: 10px;
+}
+
+.search-arrow-down.children{
+    top: 40% !important;
+}
+.search-arrow-down.rooms{
+    left:0;
+    top: 70%;
+}
+@media (max-width: 1024px) {
+  .searchBox{
+    width: 100%;
+    margin-top: 30px;
+  }
+  .calendarBox {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .roomsBox {
+    width: 45%;
+    margin-top: 30px;
+  }
+  .guestsBox {
+    width: 45%;
+    margin-top: 30px;
+  }
+  .submitBox {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .submitBox button.form_btn_small_screen  {
+    display: block;
+  }
+  .form_btn {
+    display: none;
+  }
+  .fromto {
+    background-position: 55% center;
+  }
+  .fromto div {
+    width: 50%;
+  }
+}
+::ng-deep .mat-autocomplete-panel.mat-autocomplete-visible {
+    visibility: visible;
+    padding: 0 2.188rem;
+}
+
+
+
