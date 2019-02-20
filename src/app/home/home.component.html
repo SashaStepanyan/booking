@@ -4,7 +4,7 @@
     <div class="cont my-5">
       <div class="row justify-content-between">
         <div class="searchBox">
-          <mat-form-field class="example-full-width">
+          <mat-form-field class="example-full-width example-full-width1">
             <input type="text" placeholder="יעד" aria-label="Number"
                    matInput #autoCompInp
                    [formControl]="myControl"
@@ -12,56 +12,70 @@
                    (input)="inpClick($event,autoCompInp)"
                    (keyup)="_filter(myControl.value)"
             >
-            <mat-autocomplete #auto="matAutocomplete" panelWidth="23.24rem" (optionSelected)="selectedOption($event,autoCompInp)">
-              <mat-option *ngFor="let option of filteredOptions" [value]="option" >
-                {{option}}
-              </mat-option>
-            </mat-autocomplete>
+
+                  <mat-autocomplete #auto="matAutocomplete" panelWidth="23.24rem" (optionSelected)="selectedOption($event,autoCompInp)">
+                      <mat-option *ngFor="let option of filteredOptions" [value]="option" >
+                          {{option}}
+                      </mat-option>
+                  </mat-autocomplete>
+
+
           </mat-form-field>
         </div>
-        <div class="calendarBox">
+        <div id="calendarBox" class="calendarBox">
           <!--<input type="text" class="form-control mt-2" placement="bottom" [ngbPopover]="calendar" [autoClose]="'outside'">-->
           <div class="searchbox" id="myDates" (click)="calendarTrigger.click()">
             <div class="fromto">
               <div>
                 <input type="text" id="myDates-fromDay" name="fromDay" aria-label="בחירת יום יציאה" [(ngModel)]="fromDay">
                 <input type="text" id="myDates-fromMonth" name="fromMonth" aria-label="בחירת חודש יציאה" [(ngModel)]="fromMonth">
+                  <label for="myDates" id="toFromDate" class="label">תאריכים</label>
               </div>
               <div>
                 <input type="number" id="myDates-toDay" name="toDay" aria-label="בחירת יום חזרה" [(ngModel)]="toDay">
                 <input type="text" id="myDates-toMonth" name="toMonth" aria-label="בחירת חודש חזרה" [(ngModel)]="toMonth">
+                  <label for="myDates" id="forFromDate" class="label1">תאריכים</label>
               </div>
 
             </div>
-            <label for="myDates" class="label">תאריכים</label>
+
             <div class="search-arrow-down"></div>
             <div class="field-error-content">הודעת שגיאה כלשהי</div>
           </div>
         </div>
-        <div class="roomsBox">
-          <mat-form-field class="example-full-width" placement="bottom" [ngbPopover]="popover_rooms" popoverClass="roomsPopover"  (click)="changePopoverRoomCount()" [autoClose]="'outside'" (shown)="recordShown('rooms')" (hidden)="recordHidden('rooms')">
-            <input matInput placeholder="חדרים" value="" min="0" type="number" OnlyNumber="true" [(ngModel)]="popover_rooms_count" name="roomsinput">
-          </mat-form-field>
+        <div id="roomsBox" class="roomsBox searchbox">
+            <div class="labelguests" id="roomsGuests">חדרים</div>
+          <div class="example-full-width" placement="bottom" [ngbPopover]="popover_rooms" popoverClass="roomsPopover"  (click)="changePopoverRoomCount()" [autoClose]="'outside'" (shown)="recordShown('rooms')" (hidden)="recordHidden('rooms')">
+            <input matInput  value="" min="0" type="number" OnlyNumber="true" [(ngModel)]="popover_rooms_count" name="roomsinput">
+              <label class="nonShown">מבוגרים</label>
+          </div>
+
           <div id="search-arrow-down-room" class="search-arrow-down rooms"></div>
+
         </div>
-        <div class="guestsBox">
-          <div class="row m-0 guests_value" [ngbPopover]="popover_guests" [popoverClass]="'guests'" (shown)="recordShown('adults')" (hidden)="recordHidden('adults')" (click)="changePopoverGuestsCount()" popoverClass="guestsPopover" [autoClose]="'outside'" placement="bottom" >
+        <div id="guestsBox" class="guestsBox searchbox">
+          <div id="guests_value" class="row m-0 guests_value" [ngbPopover]="popover_guests" [popoverClass]="'guests'" (shown)="recordShown('adults')" (hidden)="recordHidden('adults')" (click)="changePopoverGuestsCount()" popoverClass="guestsPopover" [autoClose]="'outside'" placement="bottom" >
             <div #labelGuests id="labelGuests" class="labelguests">אורחים</div>
             <div class="col-6 col-md-6 col-sm-6 col-xs-6 px-0 mx-0">
-              <mat-form-field class="example-full-width hidden_placeholder">
-                <input matInput placeholder="אורחים" min="0" value=""  type="number" OnlyNumber="true"  [(ngModel)]="popover_adults_count" name="adultsInput">
-              </mat-form-field>
+              <div class="example-full-width hidden_placeholder">
+                  <div id="plusDiv" class="plusDiv hidden">
+                      +
+                  </div>
+                <input  matInput  min="0" value=""  type="number" OnlyNumber="true"  [(ngModel)]="popover_adults_count" name="adultsInput">
+                  <label class="nonShown">מבוגרים</label>
+              </div>
             </div>
-            <div class="plusDiv" *ngIf="popover_children_count>0||(popover_adults_count>0&&popover_children_count>0)">
-              <h2>+</h2>
-            </div>
+
             <div class="col-6 col-md-6 col-sm-6 col-xs-6 px-0 mx-0">
-              <div id="search-arrow-down-children" class="search-arrow-down children"></div>
-              <mat-form-field class="example-full-width hidden_placeholder">
-                <input matInput placeholder="ילדים" min="0" value="" type="number" OnlyNumber="true" [(ngModel)]="popover_children_count" name="childrenInput">
-              </mat-form-field>
+
+              <div class="example-full-width hidden_placeholder">
+                <input matInput  min="0" value="" type="number" OnlyNumber="true" [(ngModel)]="popover_children_count" name="childrenInput">
+                  <label class="nonShown">ילדים</label>
+              </div>
             </div>
+
           </div>
+            <div id="search-arrow-down-children" class="search-arrow-down children"></div>
         </div>
         <div class="submitBox buttonArea">
           <button mat-button class="form_btn">
@@ -102,15 +116,17 @@
     </div>
 
   </ng-template>
+<div class="aaaaa">
+    <ng-template #popover_rooms>
+        <div class="myRoomsDiv" id="myRoomsDiv" aria-hidden="false" style="display: block;">
+            <div role="button" class="value-increase" id="increaseRooms" (click)="increaseRooms()" value="Increase Value">+</div>
+            <input type="number" id="myRoomsnumber" placeholder="0" value="0" [(ngModel)]="popover_rooms_count" name="popoverInput">
+            <div class="value-name">חדרים</div>
+            <div role="button" class="value-decrease" id="decreaseRooms" (click)="decreaseRooms()" value="Decrease Value">-</div>
+        </div>
+    </ng-template>
+</div>
 
-  <ng-template #popover_rooms>
-    <div class="myRoomsDiv" id="myRoomsDiv" aria-hidden="false" style="display: block;">
-      <div role="button" class="value-increase" id="increaseRooms" (click)="increaseRooms()" value="Increase Value">+</div>
-      <input type="number" id="myRoomsnumber" placeholder="0" value="0" [(ngModel)]="popover_rooms_count" name="popoverInput">
-      <div class="value-name">חדרים</div>
-      <div role="button" class="value-decrease" id="decreaseRooms" (click)="decreaseRooms()" value="Decrease Value">-</div>
-    </div>
-  </ng-template>
 
   <ng-template #popover_guests>
     <div class="myGuestsDiv" id="myGuestsDiv" aria-hidden="false" style="display: block;">

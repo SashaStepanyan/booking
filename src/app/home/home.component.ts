@@ -172,7 +172,7 @@ export class HomeComponent implements OnInit {
 
 
   onDateSelection(date: NgbDate) {
-    console.log(date)
+    document.getElementById('myDates').classList.add('active1');
     if (!this.fromDate && !this.toDate) {
       this.fromDate = date;
     } else if (this.fromDate && !this.toDate && date.after(this.fromDate)) {
@@ -219,6 +219,7 @@ export class HomeComponent implements OnInit {
       this.fromMonth =I18N_VALUES['hebrew']['months'][this.fromDate['month']-1];
       this.fromDay =this.fromDate['day'];
     }
+    document.getElementById('myDates').classList.remove('active1');
   }
   applyDates() {
     console.log(this.toDate, this.fromDate);
@@ -276,37 +277,44 @@ export class HomeComponent implements OnInit {
   }
   recordShown(type){
     if(type=='rooms'){
+
+      document.getElementById('roomsBox').classList.add("active_elem");
+
       document.getElementById('search-arrow-down-room').classList.add("active");
+      document.getElementById('roomsGuests').classList.add('d-none');
+
     }
     if(type=='calendar'){
       document.getElementById('myDates').classList.add('active');
+      document.getElementById('myDates').classList.add('active1');
     }
     if(type=='adults'){
+      document.getElementById('guestsBox').classList.add("active_elem");
+      document.getElementById('plusDiv').classList.remove('hidden');
       document.getElementById('search-arrow-down-children').classList.add('active');
-      document.getElementById('labelGuests').classList.add('d-none')
+      document.getElementById('guests_value').classList.add('guests_value_active');
+      document.getElementById('labelGuests').classList.add('d-none');
+
     }
   }
   recordHidden(type){
     if(type=='rooms'){
-      if (this.popover_rooms_count == 0) {
-        this.popover_rooms_count = undefined
-      }
+
       document.getElementById('search-arrow-down-room').classList.remove("active");
     }
     if(type=='calendar'){
+
+
       document.getElementById('myDates').classList.remove('active');
     }
     if(type=='adults'){
-      if (this.popover_adults_count == 0) {
-        this.popover_adults_count = undefined
-      }
-      if (this.popover_children_count == 0) {
-        this.popover_children_count = undefined
-      }
+
+
       document.getElementById('search-arrow-down-children').classList.remove('active');
-      if(!this.popover_adults_count  && !this.popover_children_count) {
-        document.getElementById('labelGuests').classList.remove('d-none')
-      }
+   //   if(!this.popover_adults_count  && !this.popover_children_count) {
+
+      //  document.getElementById('guests_value').classList.remove('guests_value_active');
+    //  }
     }
   }
 }
