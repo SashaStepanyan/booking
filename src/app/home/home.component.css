@@ -273,9 +273,10 @@ ngb-datepicker {
 }
 
 ::ng-deep .mat-autocomplete-panel{
-    pointer-events: auto!important;
-    top: 5px !important;
-    right: -13% !important;
+  pointer-events: auto!important;
+  right: -13% !important;
+  scrollbar-color: transparetn grey;
+  scrollbar-width: thin;
 }
 
 
@@ -878,4 +879,26 @@ body{
 }
 .popover-body,.popover {
     font-family: Rubik!important;
+}
+::ng-deep .cdk-overlay-pane:before,
+::ng-deep .cdk-overlay-pane:after {
+  position: absolute;
+  content: " ";
+  width: 0;
+  height: 0;
+  right: 37%;
+}
+::ng-deep .cdk-overlay-pane:before {
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 10px solid rgba(0,0,0,0.03);
+  top: -10px;
+  margin-right: -8px;
+}
+::ng-deep .cdk-overlay-pane:after {
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 9px solid white;
+  top: -9px;
+  margin-right: -7px;
 }
